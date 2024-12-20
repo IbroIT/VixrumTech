@@ -1,13 +1,226 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 1195px;
+  height: 90px;
+  align-items: center;
+  margin: 0 auto;
 }
+
+.navSystem{
+      width: 512px;
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 48px;
+      font-family: Quicksand;
+}
+
+.Contact{
+    line-height: 48px;
+    font-size: 16px;
+    width: 185px;
+    height: 48px;
+    font-weight: 700;
+    color: #377DFF;
+    border: 1px solid #377DFF;
+    border-radius: 24px;
+    font-family: Quicksand;
+    text-align: center;
+}
+
+.LogoImage{
+    width: 90px;
+    height: 90px;
+}
+
+.home{
+  color: #1D1D1D;
+  font-size: 18px;
+  font-weight: 700;
+  width: 52px;
+  height: 24px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+
+
+.NavBar{
+  display: flex;
+  justify-content: flex-end;
+  width: 512px;
+  height: 48px;
+}
+
+
+
+
+
+/* WelcomingSection */
+
+
+.Welcome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1452px;
+  height: 674px;
+  /* background: url(./components/images/WelcomeBg.png); */
+  margin: 0 auto;
+}
+
+
+.WelcomeWrapper{
+  /* width: 890px; */
+  height: 374px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-top: 100px; */
+}
+
+.WelcomeWrapper h1{
+  width: 749px;
+  height: 174px;
+  font-family: Nunito;
+  font-weight: 800;
+  font-size: 64px;
+  color: black;
+  /* overflow: hidden; */
+  text-align: center;
+  padding: 0;
+  margin: 0 0 0 0;
+  margin-bottom: 10px;
+
+  /* line-height: 87.3px; */
+}
+
+
+.WelcomeWrapper p{
+  width: 767px;
+  height: 60px;
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #464646;
+}
+
+
+.WelcomeWrapper button{
+align-items: center;
+padding: 12px 50px;
+align-items: center;
+padding: 12px 50px;
+background: #377DFF;
+box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+border-radius: 24px;
+color: white;
+font-family: Quicksand;
+font-size: 16px;
+line-height: 24px;
+margin-top: 20px;
+}
+
+
+
+/* Abilities */
+
+
+.abilities{
+  width: 1440px;
+  height: 616px;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperAbilities{
+  width: 1170px;
+  height: 466px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+.WhatWeCanDo{
+  color: #377DFF;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  width: 194px;
+  height: 24px;
+  margin-bottom: 20px;
+
+}
+
+.headingAbilities{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  width: 370px;
+  height: 412px;
+}
+
+
+.h1Abilities{
+  /* width: 370px;
+  height: 300px; */
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: #1D1D1D;
+  line-height: 76px;
+  text-align: start;
+ 
+}
+
+
+.abilitiesButton{
+  width: 120px;
+  height: 48px;
+  background-color: #377DFF;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  line-height:24px;
+  margin-top: 20px;
+}
+
+
+
+.AbilitiesCard{
+  width: 370px;
+  height:218px;
+  border: 2px solid blue;
+}
+
+
+.CardAbilities {
+  display: flex;
+  flex-direction: row;
+}
+
+.AbilitiesCard{
+  margin: 0 10 10 0;
+}
+
+ 
