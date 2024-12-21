@@ -1,8 +1,13 @@
 import React from 'react'
-// import AbilityCardPhoto1 from './images/AbilitiesCardPhoto1.jpg'
 
-export const AbilitiesCard = () => {
+
+
+export const AbilitiesCard = (props) => {
   return (
-    <div className='AbilitiesCard'> </div>
+    <div className='AbilitiesCard'> 
+    <img src={props.src} alt="" className='.w-1 .h-24' />
+    <p className='Layouts font-poppins w-14 h-14'>{props.Layouts}</p>
+    <p className='AbilityCardText'>{props.MainText} </p>
+    </div>
   )
 }
