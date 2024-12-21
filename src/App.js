@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import ReactDOM from "react-dom/client";
 import './App.css';
+import logo from './components/images/logo.jpg';
 import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
 
+  );
+}
+
 function App() {
   return (
-    <div className="App">
+      <div className="App">
       <Header/>
       <Welcome/>
       <Abilities/>
@@ -18,30 +22,6 @@ function App() {
 
 
       </div> 
-    </div>
-
-    /* all projects that we have already done , proven can help to use more comfortable, then can used by client from our business */
-
-// position: absolute;
-// width: 674px;
-// height: 67px;
-// left: 282px;
-// top: 643px;
-
-// font-family: 'Quicksand';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 20px;
-// line-height: 34px;
-// /* or 170% */
-// text-align: center;
-// letter-spacing: 0.01em;
-
-// /* grey color */
-// color: #464646;
-
-
-  );
-}
-
+  )
+   
 export default App;
