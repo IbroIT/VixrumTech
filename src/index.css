@@ -1,6 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 
 *{
@@ -12,7 +19,7 @@
 .header{
   display: flex;
   justify-content: space-between;
-  width: 1195px;
+  width: 100vw;
   height: 90px;
   align-items: center;
   margin: 0 auto;
@@ -25,6 +32,7 @@
       justify-content: space-between;
       line-height: 48px;
       font-family: Quicksand;
+      margin-right: 10vw;
 }
 
 .Contact{
@@ -41,6 +49,7 @@
 }
 
 .LogoImage{
+  margin-left: 10vw;
     width: 90px;
     height: 90px;
 }
@@ -74,10 +83,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1452px;
-  height: 674px;
+  width: 100vw;
+  height: 80vh;
   /* background: url(./components/images/WelcomeBg.png); */
   margin: 0 auto;
+  background: url(./components/images/bgphoto.png) no-repeat;
+  background-size:cover ;
+  background-position: center;
 }
 
 
@@ -97,7 +109,7 @@
   font-family: Nunito;
   font-weight: 800;
   font-size: 64px;
-  color: black;
+  color: #377DFF;
   /* overflow: hidden; */
   text-align: center;
   padding: 0;
@@ -141,9 +153,8 @@ margin-top: 20px;
 
 
 .abilities{
-  width: 1440px;
+  width: 100vw;
   height: 616px;
-  border: 2px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +163,6 @@ margin-top: 20px;
 .wrapperAbilities{
   width: 1170px;
   height: 466px;
-  border: 2px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,10 +182,10 @@ margin-top: 20px;
 
 }
 
+
 .headingAbilities{
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
   width: 370px;
   height: 412px;
 }
@@ -220,7 +230,50 @@ margin-top: 20px;
 }
 
 .AbilitiesCard{
-  margin: 0 10 10 0;
+      margin: 0 10 10 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    width: 370px;
+    height: 218px;
+    background: #FFFFFF;
+    border: 1px solid rgba(248, 135, 190, 0.1);
+    border-radius: 15px; 
+    }
+
+.Layouts{
+    width: 96px;
+    height: 32px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #0E4DA4;
+    order: 1;
+    flex-grow: 0;
 }
 
- 
+
+.AbilityCardText{
+      width: 330px;
+      height: 48px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #979797;
+      order: 2;
+      flex-grow: 0;
+}
+
+
+
+
+
+
+
