@@ -5,8 +5,7 @@ import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
 
-  );
-}
+  
 
 function App() {
   return (
@@ -22,6 +21,5 @@ function App() {
 
 
       </div> 
-  )
-   
+  
 export default App;
