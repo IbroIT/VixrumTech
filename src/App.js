@@ -8,6 +8,7 @@ import { Abilities } from './components/abilities';
 import ProjectsShowing from './components/ProjectsShowing';
 import Offer from './components/Offer';
 import ContactForm from './components/ContactForm';
+import logo from './components/images/logo.jpg'
 
 
 
@@ -38,7 +39,7 @@ function Navbar() {
 function Home() {
   return (
     <div>
-      <Header/>
+      
       <Welcome />
       <Abilities />
       <ProjectsShowing/>
