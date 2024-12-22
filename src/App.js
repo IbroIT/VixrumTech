@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 import './App.css';
-import React from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import logo from './components/images/logo.jpg';
 import { Header } from './components/Header';
+import { About_1 } from './components/About_1';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
 import ProjectsShowing from './components/ProjectsShowing';
@@ -13,7 +13,9 @@ import logo from './components/images/logo.jpg'
 
 
 function About() {
-  return <h1>This page will be made Ibro</h1>;
+  return <h1>
+    This page will be made Ibro
+  </h1>;
 }
 
 function Projects() {
@@ -33,10 +35,11 @@ function Navbar() {
         <span className='Contact'>Contact us</span>
       </div>
     </nav>
+
   );
 }
 
-function Home() {
+function App() {
   return (
     <div>
       
