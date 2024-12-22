@@ -16,6 +16,8 @@ function Projects() {
   </h1>;
 }
 
+
+
 function Navbar() {
   return (
     <nav className='header'>
