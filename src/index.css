@@ -58,17 +58,14 @@
     height: 90px;
 }
 
-.home{
-  color: #1D1D1D;
-  font-size: 18px;
-  font-weight: 700;
-  width: 52px;
-  height: 24px;
-  letter-spacing: 0.01em;
-  text-transform: capitalize;
+nav a {
+  text-decoration: none;
 }
-
-
+nav a.active {
+  text-decoration: none;
+  color: blue; /* Синий цвет для активной ссылки */
+  font-weight: bold; /* Опционально — жирный текст */
+}
 .NavBar{
   display: flex;
   justify-content: flex-end;
