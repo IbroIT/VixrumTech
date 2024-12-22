@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom/client";
 import './App.css';
-import logo from './components/images/logo.jpg';
 import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
