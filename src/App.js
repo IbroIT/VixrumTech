@@ -1,13 +1,18 @@
 import ReactDOM from "react-dom/client";
 import './App.css';
 import React from "react";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
 import ProjectsShowing from './components/ProjectsShowing';
 import Offer from './components/Offer';
 import ContactForm from './components/ContactForm';
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+
+
+      
+=======
+
 
 function About() {
   return <h1>This page will be made Ibro</h1>;
@@ -42,10 +47,13 @@ function Home() {
       <ProjectsShowing/>
       <Offer/>
       <ContactForm/>
+
     </div>
   );
 }
 
+
+=======
 function App() {
   return (
     <BrowserRouter>
@@ -56,6 +64,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 
