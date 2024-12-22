@@ -5,8 +5,6 @@ import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
 import { Abilities } from './components/abilities';
 
-<<<<<<< HEAD
-
 function About() {
   return <h1>
     This page will be made Ibro
@@ -33,8 +31,7 @@ function Navbar() {
             <span className='Contact'>Contact us</span>
         </div>
     </nav>
-=======
->>>>>>> b9b4e37eec5302c0d2d769604fce2a77498a28d4
+
   );
 }
 
@@ -51,7 +48,7 @@ function App() {
         
 
 
-      </div> 
+      </div> </div> 
   )
-   
+}
 export default App;
