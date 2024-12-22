@@ -10,9 +10,6 @@ import Offer from './components/Offer';
 import ContactForm from './components/ContactForm';
 
 
-      
-=======
-
 
 function About() {
   return <h1>This page will be made Ibro</h1>;
@@ -53,7 +50,7 @@ function Home() {
 }
 
 
-=======
+
 function App() {
   return (
     <BrowserRouter>
