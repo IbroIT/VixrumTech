@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import './App.css';
 import React from "react";
+import logo from "./components/images/logo.jpg";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { Header } from './components/Header';
 import { Welcome } from './components/Welcome';
@@ -8,10 +9,6 @@ import { Abilities } from './components/abilities';
 import ProjectsShowing from './components/ProjectsShowing';
 import Offer from './components/Offer';
 import ContactForm from './components/ContactForm';
-
-
-      
-=======
 
 
 function About() {
@@ -41,7 +38,6 @@ function Navbar() {
 function Home() {
   return (
     <div>
-      <Header/>
       <Welcome />
       <Abilities />
       <ProjectsShowing/>
@@ -52,8 +48,6 @@ function Home() {
   );
 }
 
-
-=======
 function App() {
   return (
     <BrowserRouter>
