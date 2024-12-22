@@ -39,7 +39,6 @@ function Navbar() {
 function Home() {
   return (
     <div>
-      
       <Welcome />
       <Abilities />
       <ProjectsShowing/>
