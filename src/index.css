@@ -17,6 +17,8 @@
 *{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+ 
 }
 
 
@@ -40,7 +42,6 @@
 }
 
 .Contact{
-    line-height: 48px;
     font-size: 16px;
     width: 185px;
     height: 48px;
@@ -50,6 +51,7 @@
     border-radius: 24px;
     font-family: Quicksand;
     text-align: center;
+    overflow-y: hidden;
 }
 
 .LogoImage{
@@ -105,8 +107,8 @@ nav a.active {
 }
 
 .WelcomeWrapper h1{
-  width: 749px;
-  height: 174px;
+  /* width: 749px; */
+  /* height: 174px;  */
   font-family: Nunito;
   font-weight: 800;
   font-size: 64px;
@@ -122,8 +124,8 @@ nav a.active {
 
 
 .WelcomeWrapper p{
-  width: 767px;
-  height: 60px;
+  /* width: 767px;
+  height: 60px; */
   font-family: Nunito;
   font-weight: 400;
   font-size: 20px;
@@ -162,8 +164,8 @@ margin-top: 20px;
 }
 
 .wrapperAbilities{
-  width: 1170px;
-  height: 466px;
+  /* width: 1170px;
+  height: 466px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -176,9 +178,8 @@ margin-top: 20px;
   font-family: "Poppins", serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
-  width: 194px;
-  height: 24px;
+  /* width: 194px;
+  height: 24px; */
   margin-bottom: 20px;
 
 }
@@ -187,7 +188,7 @@ margin-top: 20px;
 .headingAbilities{
   display: flex;
   flex-direction: column;
-  width: 370px;
+  width: 25vw;
   height: 412px;
 }
 
@@ -201,7 +202,7 @@ margin-top: 20px;
   color: #1D1D1D;
   line-height: 76px;
   text-align: start;
- 
+  overflow-y: hidden;
 }
 
 
@@ -282,6 +283,24 @@ margin-top: 20px;
   background: url(./components/images/OfferBg.png);
 }
 
-/* .btnOffer{
-  background-color: white;
-} */
+.footer{
+  background: #383638;
+}
+
+.photos{
+  margin: 0 auto;
+}
+
+
+
+@media (min-width:320px){
+  .header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .About{
+    visibility: hidden;
+    position: absolute;
+  }
+}

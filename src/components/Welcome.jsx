@@ -9,7 +9,7 @@ export const Welcome = () => {
                 business goal come true
                 </h1>
             
-                <p>when you need us for improve your business, <br/>
+                <p className='color-[#696969]'>when you need us for improve your business, <br/>
                 then come with us to help your business have reach it, you just sit and feel that goal</p>
 
                 <button>Start Project</button>

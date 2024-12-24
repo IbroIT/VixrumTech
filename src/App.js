@@ -9,6 +9,7 @@ import ProjectsShowing from './components/ProjectsShowing';
 import Offer from './components/Offer';
 import ContactForm from './components/ContactForm';
 import logo from './components/images/logo.jpg'
+import Footer from "./components/Footer";
 
 
 
@@ -45,7 +46,7 @@ function Home() {
       <ProjectsShowing/>
       <Offer/>
       <ContactForm/>
-
+      <Footer/>
     </div>
   );
 }
