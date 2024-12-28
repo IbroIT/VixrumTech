@@ -1,11 +1,15 @@
 import React from "react";
 import './App.css';
-import './components/Header';
+import Header from './components/Header';
+import Main from './components/Main';
 import ReactDOM from 'react-dom/client';
+
 function App() {
+  
   return (
-    <div>
-      
+    <div className='Appp'>
+      <Header />
+      <Main />
     </div>
   )
 }
