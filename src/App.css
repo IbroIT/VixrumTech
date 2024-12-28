@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .App {
   text-align: center;
 }
@@ -37,7 +37,7 @@
     transform: rotate(360deg);
   }
 }
-=======
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body{
@@ -47,4 +47,4 @@ body{
     background: linear-gradient(to bottom, #000000, #0073cf);
     padding: 33px 0 0 0;
 }
->>>>>>> IbroTech
+

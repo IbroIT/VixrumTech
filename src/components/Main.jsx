@@ -8,7 +8,7 @@ export const Main = () => {
     <div className="main_block">
         <h1 className='main_title'>Инновационные <br /> IT-решения для <br /> вашего бизнеса</h1>
     <p className='main_text'>Наша команда разрабатывает сайты и Дизайны, которые <br /> помогают компаниям расти и достигать целей</p>
-    <button>Заказать</button>
+    <button className='btn_main'>Заказать</button>
     </div>
     <img className="logo1" src={logo} alt="" />
     </div>

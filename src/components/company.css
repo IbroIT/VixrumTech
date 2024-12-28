@@ -1,0 +1,34 @@
+.company{
+    width: 1440px;
+    height: 1555px;
+    margin: 0 auto 0 auto;
+}
+.com_title{
+    color: #fff;
+    font-size: 40px;
+    margin: 0 0 25px 103px;
+    text-align: left;
+}
+.stick2{
+    width: 1370px;
+    height: 1px;
+    background: #fff;
+    margin: 0 auto 25px auto;
+
+}
+.text_com{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.imga{
+    text-align: center;
+    opacity: 100%;
+}
+.box_com{
+    width: 1146px;
+    height: 600px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}

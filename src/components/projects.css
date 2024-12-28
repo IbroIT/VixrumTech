@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.Projects{
+    width: 1440px;
+    margin: 0 auto;
+    height: 2315px;
+}
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    margin: -110px 0 44px 0;
+}
+h3{
+    margin: 66px  0 0 0 ;
+    color: #fff;
+    font-size: 32px;
+}
+.pr_block{
+    width: 1350px;
+    height: 634px;
+    background: #121212;
+    border-radius: 24px;
+    display: flex;
+    margin: 31px auto 0 auto;
+    justify-content: space-around;
+}
+
+.Log{
+    width: 626px;
+    height: 500px;
+    margin: 66px  0 0 0;
+}
+.pr_btn{
+    width: 139px;
+    height: 48px;
+    background: none;
+    border: solid 2px #3B3B3B;
+    border-radius: 8px;
+    font-family: "Rubik", serif;
+    margin: 273px 0 0 0;
+    color: #fff;
+}
+.title{
+    color: #fff;
+    font-size: 38px;
+    text-align: left;
+    margin: 0 0 0 110px;
+}
+.pred_block{
+    width: 1440px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn_predd{
+    width: 141px;
+    height: 43px;
+    margin: 0 111px 0 0;
+    background: #3CB9F3;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    font-size: 21px;
+}

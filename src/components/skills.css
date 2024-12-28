@@ -1,0 +1,26 @@
+.Skills1{
+    width: 1440px;
+    margin: 0 auto;
+}
+.logo_sk{
+    margin: 35px 0 0 0;
+}
+.title_sk{
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin: 34px 0 34px 0;
+}
+.box_sk{
+    width: 1440px;
+    height: 2000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.sk_block1{
+    width: 535px;
+}
+.sk_block2{
+    width: 535px;
+}
