@@ -1,0 +1,52 @@
+.Header1{
+    
+}
+.stick{
+    width: 1px;
+    height: 20px;
+    background: #fff;
+    margin: 0 9px 0 -26px;
+    opacity: 50%;
+
+}
+.logo2{
+    opacity: 50%;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+}
+a{
+    color: aliceblue;
+    opacity: 50%;
+}
+p{
+    color: aliceblue;
+    opacity: 50%;
+
+}
+.text_nav{
+    margin: 0 0 0 15px ;
+}
+nav{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block_nav{
+    width: 463px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav_mini_block{
+    width: 159px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
