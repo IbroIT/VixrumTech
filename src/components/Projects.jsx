@@ -1,11 +1,21 @@
 import React from 'react'
 import './projects.css';
 import logo from './images/Image.svg'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+import { useEffect } from 'react';
+
+
+
+
 export const Projects = () => { 
+
+
   return (
 
     <div className='Projects' >
-        <h2>Наши успешные проекты</h2>
+        <h2 id='headingProject'>Наши успешные проекты</h2>
         <div className="pr_block">
             <div className="mini_block">
                 <h3>Online Streaming App</h3>

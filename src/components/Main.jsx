@@ -1,7 +1,29 @@
 import React from 'react'
 import './main.css';
 import logo from './images/Group 1.svg'
+import {useGSAP} from '@gsap/react'
+import gsap from 'gsap'
+
+
 export const Main = () => {
+  useGSAP(() => {
+    gsap.from('.logo1', {
+      x:0,
+      y:40,
+      rotation:0
+    })
+    gsap.to('.logo1', {
+      y:55,
+      duration:1,
+      repeat:-1,
+      yoyo:true,
+      ease: "linear",
+    })
+  }, [])
+
+
+
+
     const style = "margin: -10px 0 0 0"
   return (
     <div className='Main1' > 
