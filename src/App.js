@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 
@@ -20,6 +21,18 @@ function App() {
       </header>
     </div>
   );
+=======
+import React from "react";
+import './App.css';
+import './components/Header';
+import ReactDOM from 'react-dom/client';
+function App() {
+  return (
+    <div>
+      
+    </div>
+  )
+>>>>>>> IbroTech
 }
 
 export default App;
