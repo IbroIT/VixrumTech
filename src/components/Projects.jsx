@@ -4,7 +4,7 @@ import logo from './images/Image.svg'
 export const Projects = () => { 
   return (
 
-    <div className='Projects' >
+    <div id='Project' className='Projects' >
         <h2>Наши успешные проекты</h2>
         <div className="pr_block">
             <div className="mini_block">

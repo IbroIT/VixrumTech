@@ -3,14 +3,20 @@ import './header.css';
 import logo from './images/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png'
 import insta from './images/instagram (2).png'
 export const Header = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Добавление плавности
+    }
+  };
   return (
     <div className='Header1' > 
     <nav>
             <img className="logo" src={logo} alt={""} />
             <div className='block_nav'>
-              <a>Главная</a>
-            <a>О нас</a>
-            <a>Проекты</a>
+              <li onClick={() => scrollToSection('Main_p')}>Главная</li>
+            <li onClick={() => scrollToSection('About')}>О нас</li>
+            <li onClick={() => scrollToSection('Project')}>Проекты</li>
             
             <div className="nav_mini_block">
               <div className="stick"></div>
