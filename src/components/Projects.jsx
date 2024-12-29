@@ -14,13 +14,8 @@ export const Projects = () => {
 
   return (
 
-<<<<<<< HEAD
-    <div className='Projects' >
-        <h2 id='headingProject'>Наши успешные проекты</h2>
-=======
     <div id='Project' className='Projects' >
         <h2>Наши успешные проекты</h2>
->>>>>>> IbroTech
         <div className="pr_block">
             <div className="mini_block">
                 <h3>Online Streaming App</h3>
