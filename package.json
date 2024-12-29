@@ -5,17 +5,24 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "cra-template": "1.2.0",
+<<<<<<< HEAD
+=======
+    "gh-pages": "^6.2.0",
+>>>>>>> IbroTech
     "gsap": "^3.12.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "^5.0.1",
     "web-vitals": "^4.2.4"
   },
+  "homepage": "https://IbroIT.github.io/VixrumTech",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
