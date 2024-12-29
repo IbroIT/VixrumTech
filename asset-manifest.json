@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/VixrumTech/static/css/main.b7d675f8.css",
+    "main.js": "/VixrumTech/static/js/main.9b8f931a.js",
+    "static/js/488.9c92ff38.chunk.js": "/VixrumTech/static/js/488.9c92ff38.chunk.js",
+    "static/media/Group 1.svg": "/VixrumTech/static/media/Group 1.4fdb21f524ff5c365684b7da13865993.svg",
+    "static/media/Image.svg": "/VixrumTech/static/media/Image.8e99123a78748d1ff3e899f0b78dff03.svg",
+    "static/media/Rectangle 6.svg": "/VixrumTech/static/media/Rectangle 6.ef85b9946187b9fd71e0b090ac50a004.svg",
+    "static/media/Group 18.svg": "/VixrumTech/static/media/Group 18.66fe72cbf55bb4ddbdfcca3f7a92ce64.svg",
+    "static/media/Rectangle 6473.svg": "/VixrumTech/static/media/Rectangle 6473.039960801e6eb988a3fffa42a237d3ae.svg",
+    "static/media/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png": "/VixrumTech/static/media/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.aaf0317dc4a75d8ba280.png",
+    "static/media/Group 17.svg": "/VixrumTech/static/media/Group 17.4d22b8012240f4de9de0f7f3da10a981.svg",
+    "static/media/Group 23.svg": "/VixrumTech/static/media/Group 23.9e7c472693d8a7aebe3830c522caa5ba.svg",
+    "static/media/Rectangle 6474.svg": "/VixrumTech/static/media/Rectangle 6474.2ed88cc4eb3cbaf6a56307be59cb8586.svg",
+    "static/media/Group 19.svg": "/VixrumTech/static/media/Group 19.b65523daee5c14124cfbd9af6bd87dca.svg",
+    "static/media/Group 22.svg": "/VixrumTech/static/media/Group 22.a70ec8449f63d67ed24deeee8c2150c5.svg",
+    "static/media/Group 21.svg": "/VixrumTech/static/media/Group 21.d3880496209b9a96b0d77644cc256a69.svg",
+    "static/media/Group 20.svg": "/VixrumTech/static/media/Group 20.e8c6ef7b19c61601ca2a32d386705722.svg",
+    "static/media/Group 16.svg": "/VixrumTech/static/media/Group 16.8d1f15402d67ea1698b96cfb446d884c.svg",
+    "index.html": "/VixrumTech/index.html",
+    "main.b7d675f8.css.map": "/VixrumTech/static/css/main.b7d675f8.css.map",
+    "main.9b8f931a.js.map": "/VixrumTech/static/js/main.9b8f931a.js.map",
+    "488.9c92ff38.chunk.js.map": "/VixrumTech/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7d675f8.css",
+    "static/js/main.9b8f931a.js"
+  ]
+}
