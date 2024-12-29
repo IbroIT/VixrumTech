@@ -2,6 +2,12 @@ import React from 'react'
 import './header.css';
 import logo from './images/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png'
 import insta from './images/instagram (2).png'
+import gsap from 'gsap'
+import {useGSAP} from '@gsap/react'
+
+
+
+
 export const Header = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -9,6 +15,15 @@ export const Header = () => {
       element.scrollIntoView({ behavior: 'smooth' }); // Добавление плавности
     }
   };
+
+  useGSAP(() => {
+    gsap.to('.Header1', {
+      opacity:1,
+      delay:0.5,
+      stagger:0.8,
+    })
+  })
+
   return (
     <div className='Header1' > 
     <nav>

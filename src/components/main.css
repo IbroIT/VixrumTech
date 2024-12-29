@@ -7,7 +7,7 @@
 .logo1{
     width: 766px;
     height: 726px;
-    margin: -44px 0 0 -9px;
+    margin: 0px 0 0 -9px;
 }
 .main_title{
     color: #3CB9F3;
@@ -30,4 +30,8 @@
     border-radius: 10px;
     border: solid 1px #fff;
     font-size: 16px;
+}
+
+.main_block{
+    opacity: 0;
 }

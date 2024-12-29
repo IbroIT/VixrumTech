@@ -6,8 +6,7 @@ import Main from './components/Main';
 import Company from './components/Company';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 
 function App() {
   

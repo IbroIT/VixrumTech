@@ -22,6 +22,14 @@ export const Main = () => {
   }, [])
 
 
+  useGSAP(() => {
+    gsap.to('.main_block', {
+      opacity:1,
+      delay:1.5,
+      stagger:3
+    })
+  })
+
 
 
     const style = "margin: -10px 0 0 0"
