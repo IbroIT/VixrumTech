@@ -5,7 +5,7 @@ import logo2 from './images/Rectangle 6473.svg'
 import logo3 from './images/Rectangle 6474.svg'
 export const Companny = () => { 
   return (
-    <div className='company' >
+    <div id='About' className='company' >
       <h2 className="com_title">О нашей компании</h2>
       <div className="stick2"></div>
       <p className="imga"><img src={logo} alt="" /></p> 
