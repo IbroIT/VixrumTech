@@ -49,7 +49,7 @@ h3{
 .pred_block{
     width: 1440px;
     height: 120px;
-    margin: 0 auto;
+    margin: 60px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,5 +63,27 @@ h3{
     color: #fff;
     border-radius: 10px;
     border: solid 2px #fff;
+    font-size: 21px;
+}
+.btn_predd:hover{
+    width: 141px;
+    height: 43px;
+    margin: 0 111px 0 0;
+    background: #2789b6;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    font-size: 21px;
+}
+.btn_predd:active{
+    width: 141px;
+    height: 43px;
+    margin: 0 111px 0 0;
+    background: none;
+    border: none;
+    color: #3CB9F3;
+    border-radius: 10px;
+    border: solid 2px #3CB9F3;
     font-size: 21px;
 }

@@ -39,7 +39,7 @@ export const Projects = () => {
         <p>Веб-решения: креативные и функциональные сайты. <br />
 Дизайн: брендинг и UI/UX. <br />
 Видео и анимация: яркие визуалы для вашего бренда.</p>
-<button className="btn_predd">Связаться</button>
+<a href="https://t.me/VixrumTech_company"><button className="btn_predd">Связаться</button></a>
         </div>
         
     </div>
