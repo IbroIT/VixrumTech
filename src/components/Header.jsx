@@ -35,7 +35,8 @@ export const Header = () => {
             
             <div className="nav_mini_block">
               <div className="stick"></div>
-              <img className="logo2 "src={insta} alt={""}/>
+              <a href='https://www.instagram.com/vixrumtech/'><img className="logo2 "src={insta} alt={""}/></a>
+              
             <p className="text_nav">+996707261196</p>
             </div>
             

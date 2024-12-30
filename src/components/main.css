@@ -34,4 +34,28 @@
 
 .main_block{
     opacity: 0;
+    border: solid 2px #fff;
+    font-size: 21px;
+}
+.btn_main:hover{
+    width: 141px;
+    height: 43px;
+    margin: 0 0 0 150px;
+    background: #2995c7;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    font-size: 21px;
+}
+.btn_main:active{
+    width: 141px;
+    height: 43px;
+    margin: 0 0 0 150px;
+    background: none;
+    border: none;
+    color: #3CB9F3;
+    border-radius: 10px;
+    border: solid 2px #3CB9F3;
+    font-size: 21px;
 }

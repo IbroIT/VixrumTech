@@ -37,10 +37,10 @@ export const Main = () => {
     <div id='Main_p' className='Main1' > 
     <div className="main_block">
         <h1 className='main_title'>Инновационные <br /> IT-решения для <br /> вашего бизнеса</h1>
-    <p className='main_text'>Наша команда разрабатывает сайты и Дизайны, которые <br /> помогают компаниям расти и достигать целей</p>
-    <button className='btn_main'>Заказать</button>
+     <p className='main_text'>Наша команда разрабатывает сайты и Дизайны, которые <br /> помогают компаниям расти и достигать целей</p>
+     <a href="https://t.me/VixrumTech_company"> <button className='btn_main'>Заказать</button></a>
     </div>
-    <img className="logo1" src={logo} alt="" />
+    <img className="logo1" src={logo} alt=""  />
     </div>
   )
 }
