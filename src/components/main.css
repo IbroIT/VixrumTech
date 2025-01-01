@@ -34,7 +34,6 @@
 
 .main_block{
     opacity: 0;
-    border: solid 2px #fff;
     font-size: 21px;
 }
 .btn_main:hover{
