@@ -30,6 +30,10 @@ h3{
     height: 500px;
     margin: 66px  0 0 0;
 }
+.mb_text{
+    color: #fff;
+    opacity: 50%;
+}
 .pr_btn{
     width: 139px;
     height: 48px;
@@ -41,10 +45,17 @@ h3{
     color: #fff;
 }
 .title{
-    color: #fff;
-    font-size: 38px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
     text-align: left;
     margin: 0 0 0 110px;
+}
+.pred_text{
+    color: #D9E6F2; /* Светлый текст */
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: "Rubik", serif;
 }
 .pred_block{
     width: 1440px;
@@ -55,37 +66,22 @@ h3{
     justify-content: space-between;
 }
 .btn_predd{
-    width: 141px;
-    height: 43px;
-    margin: 0 111px 0 0;
-    background: #3CB9F3;
+    background: linear-gradient(90deg, #00A6FF, #00D4FF);
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
     border: none;
-    color: #fff;
-    border-radius: 10px;
-    border: solid 1px #fff;
-    font-size: 16px;
-    border: solid 2px #fff;
-    font-size: 21px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  font-weight: bold;
+  margin: 20px 112px 0 0;
 }
 .btn_predd:hover{
-    width: 141px;
-    height: 43px;
-    margin: 0 111px 0 0;
-    background: #2789b6;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    border: solid 2px #fff;
-    font-size: 21px;
+    background: linear-gradient(90deg, #00D4FF, #00A6FF);
+    transform: scale(1.1);
 }
 .btn_predd:active{
-    width: 141px;
-    height: 43px;
-    margin: 0 111px 0 0;
-    background: none;
-    border: none;
-    color: #3CB9F3;
-    border-radius: 10px;
-    border: solid 2px #3CB9F3;
-    font-size: 21px;
+    transform: scale(0.95);
+
 }

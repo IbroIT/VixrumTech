@@ -34,11 +34,12 @@ li:active{
 }
 p{
     color: aliceblue;
-    opacity: 50%;
 
 }
 .text_nav{
     margin: 0 0 0 15px ;
+    color: #fff;
+    opacity: 50%;
 }
 nav{
     width: 1200px;
