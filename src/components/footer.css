@@ -1,0 +1,39 @@
+.foter{
+    width: 1200px;
+    height: 300px;
+    background: linear-gradient(to bottom, #1D2839, #131A24);
+    border-radius: 100px 100px 0 0;
+    margin: 138px auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer_block{
+    margin: 52px -85px 0px 0;
+}
+h4{
+    color: #fff;
+    font-size: 20px;
+
+}
+.fb1_p{
+    color: #fff;
+    opacity: 60%;
+    font-size: 17px;
+}
+.f_link{
+    font-size: 17px;
+    color: #fff;
+    opacity: 60%;
+    text-decoration: underline;
+}
+.f_link:hover{
+    font-size: 17px;
+    color: #ffffff;
+    opacity: 90%;
+    text-decoration: underline;
+}
+.f_p{
+    color: #fff;
+    opacity: 60%;
+    font-size: 17px;
+}

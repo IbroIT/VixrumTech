@@ -25,11 +25,11 @@ export const Header = () => {
   })
 
   return (
-    <div className='Header1' > 
+    <div id='Header_id' className='Header1' > 
     <nav>
             <img className="logo" src={logo} alt={""} />
             <div className='block_nav'>
-              <li onClick={() => scrollToSection('Main_p')}>Главная</li>
+            <li onClick={() => scrollToSection('Header_id')}>Главная</li>
             <li onClick={() => scrollToSection('About')}>О нас</li>
             <li onClick={() => scrollToSection('Project')}>Проекты</li>
             

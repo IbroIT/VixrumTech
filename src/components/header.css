@@ -24,9 +24,10 @@ li{
     list-style-type: none;
 }
 li:hover{
-    color: rgb(204, 204, 204);
-    opacity: 50%;
+    color: #fff;
+    opacity: 90%;
     list-style-type: none;
+    transition: 0.3s;
 }
 li:active{
     color: #3CB9F3;
