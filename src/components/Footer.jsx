@@ -16,7 +16,7 @@ export const Footer = () => {
     <div className='foter' > 
     <div className="footer_block">
       <h4>О компании</h4>
-      <p className="fb1_p">VixrumTech — молодая команда экспертов в <br /> создании сайтов, дизайна, видеоэффектов и <br /> анимации. Мы создаём яркие и запоминающиеся <br /> цифровые решения для вашего бренда. <br /><br /> © 2024  VixrumTech</p>
+      <p className="fb1_p">VixrumTech — молодая команда экспертов в <br /> создании сайтов, дизайна, видеоэффектов и <br /> анимации. Мы создаём яркие и запоминающиеся <br /> цифровые решения для вашего бренда. <br /><br /> © 2025  VixrumTech</p>
     </div>
     <div className="footer_block">
       <h4>Навигация</h4>
