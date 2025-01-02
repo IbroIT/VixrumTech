@@ -29,9 +29,9 @@ export const Header = () => {
     <nav>
             <img className="logo" src={logo} alt={""} />
             <div className='block_nav'>
-              <li onClick={() => scrollToSection('Main_p')}>Главная</li>
-            <li onClick={() => scrollToSection('About')}>О нас</li>
-            <li onClick={() => scrollToSection('Project')}>Проекты</li>
+              <li onClick={() => scrollToSection('Main_p')} className='block_navEl'>Главная</li>
+            <li onClick={() => scrollToSection('About')} className='block_navEl'>О нас</li>
+            <li onClick={() => scrollToSection('Project')} className='block_navEl'>Проекты</li>
             
             <div className="nav_mini_block">
               <div className="stick"></div>
