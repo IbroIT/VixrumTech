@@ -1,10 +1,9 @@
 import React from 'react'
 import './projects.css';
 import logo from './images/Image.svg'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { useEffect } from 'react';
+import gif1 from './images/free-animated-icon-idea-6172533.gif'
+import gif2 from './images/free-animated-icon-vector-8800707.gif'
+import gif3 from './images/free-animated-icon-video-6172536.gif'
 
 
 
@@ -44,12 +43,17 @@ export const Projects = () => {
             <img className="Log" src={logo} alt="" />
         </div>
         <div className="pred_block">
-            <h2 className="title">Что мы <br /> 
-        предлагаем?</h2>
-        <p className='pred_text'>Веб-решения: креативные и функциональные сайты. <br />
-Дизайн: брендинг и UI/UX. <br />
-Видео и анимация: яркие визуалы для вашего бренда.</p>
-<a href="https://t.me/VixrumTech_company"><button className="btn_predd">Связаться</button></a>
+                <h2 className="title">Что мы <br />  
+                предлагаем?</h2>
+                <div className="pb_block_gif">
+                <img class='img_gif' src={gif1} alt="Лампочка, символизирующая идею" />
+                <img class='img_gif' src={gif2} alt="Дизайн, символизирующий творчество" />
+                <img class='img_gif' src={gif3} alt="Видеокамера, символизирующая видео" />
+                    </div> 
+                <p className='pred_text'>Веб-решения: креативные и функциональные сайты. <br />
+                  Дизайн: брендинг и UI/UX. <br />
+                  Видео и анимация: яркие визуалы для вашего бренда.</p>
+            <a href="https://t.me/VixrumTech_company"><button className="btn_predd">Связаться</button></a>
         </div>
         
     </div>

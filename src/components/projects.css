@@ -56,6 +56,7 @@ h3{
   font-size: 18px;
   line-height: 1.8;
   font-family: "Rubik", serif;
+  margin: 3px 0 0 0;
 }
 .pred_block{
     width: 1440px;
@@ -84,4 +85,15 @@ h3{
 .btn_predd:active{
     transform: scale(0.95);
 
+}
+.pb_block_gif{
+    width: 25px;
+    height: 94px;
+    margin:  0 -170px 0 0;
+}
+.img_gif{
+    width: 25px;
+    height: 25px;
+    margin: 5px 0 0 0;
+    border-radius: 5px;
 }
