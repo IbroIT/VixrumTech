@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.css';
+import '../index.css';
 import logo from './images/Black___Blue_Minimalist_Modern_Initial_Font_Logo-removebg-preview.png'
 import insta from './images/instagram (2).png'
 import gsap from 'gsap'
@@ -29,10 +30,10 @@ export const Header = () => {
     <nav>
             <img className="logo" src={logo} alt={""} />
             <div className='block_nav'>
-            <li onClick={() => scrollToSection('Header_id')}>Главная</li>
+            
             <li onClick={() => scrollToSection('About')}>О нас</li>
             <li onClick={() => scrollToSection('Project')}>Проекты</li>
-            
+            <li className="mr-2" onClick={() => scrollToSection('foterb')}>Контакты</li>
             <div className="nav_mini_block">
               <div className="stick"></div>
               <a href='https://www.instagram.com/vixrumtech/'><img className="logo2 "src={insta} alt={""}/></a>
@@ -43,6 +44,7 @@ export const Header = () => {
             </div>
             
           </nav>
+          <script></script>
     </div>
   )
 }
