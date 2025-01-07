@@ -1,11 +1,16 @@
 {
   "files": {
-    "main.css": "/VixrumTech/static/css/main.bdb57660.css",
-    "main.js": "/VixrumTech/static/js/main.2057f770.js",
+    "main.css": "/VixrumTech/static/css/main.a7660e09.css",
+    "main.js": "/VixrumTech/static/js/main.2e21cbe2.js",
     "static/js/488.9c92ff38.chunk.js": "/VixrumTech/static/js/488.9c92ff38.chunk.js",
     "static/media/Group 1.svg": "/VixrumTech/static/media/Group 1.4fdb21f524ff5c365684b7da13865993.svg",
+    "static/media/photo.gif": "/VixrumTech/static/media/photo.3dc902c09d5855ef5150.gif",
     "static/media/Image.svg": "/VixrumTech/static/media/Image.8e99123a78748d1ff3e899f0b78dff03.svg",
     "static/media/free-animated-icon-vector-8800707.gif": "/VixrumTech/static/media/free-animated-icon-vector-8800707.48b945ccb59dfd3adc69.gif",
+    "static/media/phone.gif": "/VixrumTech/static/media/phone.92799eed16279fb10f6b.gif",
+    "static/media/email.gif": "/VixrumTech/static/media/email.9d548a065a1ab7310f4d.gif",
+    "static/media/Снимок экрана 2025-01-07 140138.png": "/VixrumTech/static/media/Снимок экрана 2025-01-07 140138.87ab19671624c59a5285.png",
+    "static/media/paper-plane.gif": "/VixrumTech/static/media/paper-plane.f67fd80ceeffdc6dd09d.gif",
     "static/media/free-animated-icon-idea-6172533.gif": "/VixrumTech/static/media/free-animated-icon-idea-6172533.87e03add658296c0eddb.gif",
     "static/media/free-animated-icon-video-6172536.gif": "/VixrumTech/static/media/free-animated-icon-video-6172536.a31066ca67c66135d829.gif",
     "static/media/Rectangle 6.svg": "/VixrumTech/static/media/Rectangle 6.ef85b9946187b9fd71e0b090ac50a004.svg",
@@ -21,12 +26,12 @@
     "static/media/Group 20.svg": "/VixrumTech/static/media/Group 20.e8c6ef7b19c61601ca2a32d386705722.svg",
     "static/media/Group 16.svg": "/VixrumTech/static/media/Group 16.8d1f15402d67ea1698b96cfb446d884c.svg",
     "index.html": "/VixrumTech/index.html",
-    "main.bdb57660.css.map": "/VixrumTech/static/css/main.bdb57660.css.map",
-    "main.2057f770.js.map": "/VixrumTech/static/js/main.2057f770.js.map",
+    "main.a7660e09.css.map": "/VixrumTech/static/css/main.a7660e09.css.map",
+    "main.2e21cbe2.js.map": "/VixrumTech/static/js/main.2e21cbe2.js.map",
     "488.9c92ff38.chunk.js.map": "/VixrumTech/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bdb57660.css",
-    "static/js/main.2057f770.js"
+    "static/css/main.a7660e09.css",
+    "static/js/main.2e21cbe2.js"
   ]
 }
