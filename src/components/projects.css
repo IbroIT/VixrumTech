@@ -28,7 +28,8 @@ h3{
 .Log{
     width: 626px;
     height: 500px;
-    margin: 66px  0 0 0;
+    margin: 66px 0 0 0;
+    border-radius: 15px;
 }
 .mb_text{
     color: #fff;
@@ -43,6 +44,27 @@ h3{
     font-family: "Rubik", serif;
     margin: 273px 0 0 0;
     color: #fff;
+}
+.pr_btn:hover{
+    width: 139px;
+    height: 48px;
+    background: none;
+    border: solid 2px #fff;
+    border-radius: 8px;
+    font-family: "Rubik", serif;
+    margin: 273px 0 0 0;
+    color: #fff;
+    transition: 0.2s;
+}
+.pr_btn:active{
+    width: 139px;
+    height: 48px;
+    background: none;
+    border: solid 2px #00A6FF;
+    border-radius: 8px;
+    font-family: "Rubik", serif;
+    margin: 273px 0 0 0;
+    color: #00A6FF;
 }
 .title{
     color: white;
