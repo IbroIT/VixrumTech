@@ -6,7 +6,7 @@ import Main from './components/Main';
 import Company from './components/Company';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
-import { Footer } from './components/Footer';
+import Foter from './components/Foter';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Projects />
       <Company />
       <Skills />
-      <Footer />
+      <Foter />
     </div>
   )
 
