@@ -46,6 +46,18 @@ export const Main = () => {
       duration: 2,
       ease: "power4.out"
     })
+    const isMobile = window.innerWidth <= 450;
+
+    tl.from(titleRef.current.querySelectorAll('span'), {
+      opacity: 0,
+      y: isMobile ? 20 : 50,
+      rotationX: isMobile ? 45 : 90,
+      transformOrigin: "0% 50% -50",
+      stagger: isMobile ? 0.05 : 0.03,
+      duration: isMobile ? 0.5 : 0.8,
+      ease: "back.out(1.7)"
+    }, "-=1.5")
+
 
     // Text typing animation for title
     tl.to(titleRef.current, {
@@ -130,10 +142,10 @@ export const Main = () => {
   }, [])
 
   return (
-    <section id='Home'
-      ref={containerRef} 
-      className="relative w-full h-screen flex items-center justify-center bg-[radial-gradient(ellipse_at_bottom,_#1B2735_0%,_#090A0F_100%)] text-white overflow-hidden perspective-1000"
-    >
+      <section id='Home'
+               ref={containerRef}
+               className="relative w-full h-screen flex items-center justify-center bg-[radial-gradient(ellipse_at_bottom,_#1B2735_0%,_#090A0F_100%)] text-white overflow-hidden perspective-1000"
+      >
       {/* Background particles */}
       <div ref={particlesRef} className="particles-container absolute w-full h-full overflow-hidden"></div>
       
@@ -143,27 +155,26 @@ export const Main = () => {
       <div className="gradient-circle purple absolute rounded-full bg-[#8A2BE2] filter blur-[100px] opacity-0 w-[400px] h-[400px] top-1/2 left-[30%] animate-[pulse_12s_infinite_alternate_2s]"></div>
       
       {/* Content */}
-      <div className="content-container relative z-10 max-w-[1200px] px-[5%] text-center">
-        <h1 ref={titleRef} className="main-title text-[clamp(2.5rem,_7vw,_5.5rem)] font-black leading-[1.1] mb-8 uppercase bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(60,_185,_243,_0.3)]">
-          {" ".split('').map((_, i) => (
-            <span key={i} className="letter inline-block min-w-[10px]">{i % 2 === 0 ? '' : ''}</span>
-          ))}
-        </h1>
-        
-        <p ref={textRef} className="main-text text-[clamp(1rem,_2vw,_1.5rem)] max-w-[700px] mx-auto mb-12 leading-[1.6] text-white/90 [text-shadow:0_0_10px_rgba(255,_255,_255,_0.3)]">
-          Наша команда создает цифровые решения, которые выводят бизнес на новый уровень
-        </p>
-        
-        <a href="https://t.me/IbroAbdraimov">
-        <button
-  ref={buttonRef}
-  className="relative px-12 py-4 text-white font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl active:scale-95"
->
-  Обсудить проект
-</button>
-        </a> 
+        <div className="content-container relative z-10 max-w-[1200px] px-[5%] text-center">
+          <h1 ref={titleRef} className="main-title text-[clamp(1.8rem,_6vw,_5.5rem)] max-[450px]:text-[clamp(1.5rem,_5vw,_2.5rem)] font-black leading-[1.1] mb-8 max-[450px]:mb-4 uppercase bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(60,_185,_243,_0.3)]">
+            {/* Добавляем переносы текста для мобильных */}
+            <div className="max-[450px]:block max-[450px]:mb-2">Инновационные IT-решения</div>
+            <div className="max-[450px]:block">для вашего бизнеса</div>
+          </h1>
 
-      </div>
+          <p ref={textRef} className="main-text text-[clamp(0.9rem,_2vw,_1.5rem)] max-[450px]:text-[0.9rem] max-w-[700px] mx-auto mb-12 max-[450px]:mb-8 leading-[1.6] text-white/90 [text-shadow:0_0_10px_rgba(255,_255,_255,_0.3)]">
+            Наша команда создает цифровые решения, которые выводят бизнес на новый уровень
+          </p>
+
+          <a href="https://t.me/IbroAbdraimov">
+            <button
+                ref={buttonRef}
+                className="relative px-12 py-4 max-[450px]:px-8 max-[450px]:py-3 text-white font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl active:scale-95"
+            >
+              Обсудить проект
+            </button>
+          </a>
+        </div>
       
       {/* Logo with glow effect */}
       <img 
