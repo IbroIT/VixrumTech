@@ -216,7 +216,7 @@ export const Header = () => {
                     className="hover:scale-110 transition-transform"
                   >
                     <img 
-                      src="./images/instagram (2).png" 
+                      src={insta}
                       alt="Instagram" 
                       className="w-7 h-7"
                     />
