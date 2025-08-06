@@ -156,20 +156,20 @@ export const Main = () => {
       
       {/* Content */}
         <div className="content-container relative z-10 max-w-[1200px] px-[5%] text-center">
-          <h1 ref={titleRef} className="main-title text-[clamp(1.8rem,_6vw,_5.5rem)] max-[450px]:text-[clamp(1.5rem,_5vw,_2.5rem)] font-black leading-[1.1] mb-8 max-[450px]:mb-4 uppercase bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(60,_185,_243,_0.3)]">
-            {/* Добавляем переносы текста для мобильных */}
-            <div className="max-[450px]:block max-[450px]:mb-2">Инновационные IT-решения</div>
+          <h1 ref={titleRef} className="main-title text-[clamp(2rem,_6vw,_5.5rem)] max-[450px]:text-[clamp(1.8rem,_5vw,_3rem)] font-black leading-[1.1] mb-8 max-[450px]:mb-6 uppercase bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent [text-shadow:0_0_20px_rgba(60,_185,_243,_0.3)]">
+            {/* Переносы текста с немного увеличенным размером */}
+            <div className="max-[450px]:block max-[450px]:mb-1">Инновационные IT-решения</div>
             <div className="max-[450px]:block">для вашего бизнеса</div>
           </h1>
 
-          <p ref={textRef} className="main-text text-[clamp(0.9rem,_2vw,_1.5rem)] max-[450px]:text-[0.9rem] max-w-[700px] mx-auto mb-12 max-[450px]:mb-8 leading-[1.6] text-white/90 [text-shadow:0_0_10px_rgba(255,_255,_255,_0.3)]">
+          <p ref={textRef} className="main-text text-[clamp(1rem,_2vw,_1.5rem)] max-[450px]:text-[1.1rem] max-w-[700px] mx-auto mb-12 max-[450px]:mb-10 leading-[1.6] text-white/90 [text-shadow:0_0_10px_rgba(255,_255,_255,_0.3)]">
             Наша команда создает цифровые решения, которые выводят бизнес на новый уровень
           </p>
 
           <a href="https://t.me/IbroAbdraimov">
             <button
                 ref={buttonRef}
-                className="relative px-12 py-4 max-[450px]:px-8 max-[450px]:py-3 text-white font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl active:scale-95"
+                className="relative px-12 py-4 max-[450px]:px-10 max-[450px]:py-3.5 text-white font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl active:scale-95"
             >
               Обсудить проект
             </button>
