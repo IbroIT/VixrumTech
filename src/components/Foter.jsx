@@ -162,7 +162,7 @@ const Footer = () => {
             Instagram
           </motion.a>
           <motion.a 
-            href="https://t.me/VixrumTech_company" 
+            href="https://t.me/IbroAbdraimov" 
             className="text-[#3CB9F3] hover:text-[#e81ba7] block transition-colors duration-300"
             variants={itemVariants}
             whileHover={{ x: 5 }}
