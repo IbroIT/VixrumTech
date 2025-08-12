@@ -1,160 +1,306 @@
-import { useEffect, useRef } from 'react';
-import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/opacity.css';
+import React, { useEffect, useRef, useCallback, useMemo } from "react";
+import "./PortfolioCard.css";
 
-const TeamMemberCard = ({ member }) => {
+const DEFAULT_BEHIND_GRADIENT =
+  "radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,#00ffaac4 0%,#073aff00 100%),radial-gradient(100% 100% at 50% 50%,#00c1ffff 1%,#073aff00 76%),conic-gradient(from 124deg at 50% 50%,#c137ffff 0%,#07c6ffff 40%,#07c6ffff 60%,#c137ffff 100%)";
+
+const DEFAULT_INNER_GRADIENT =
+  "linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)";
+
+const ANIMATION_CONFIG = {
+  SMOOTH_DURATION: 600,
+  INITIAL_DURATION: 1500,
+  INITIAL_X_OFFSET: 70,
+  INITIAL_Y_OFFSET: 60,
+  DEVICE_BETA_OFFSET: 20,
+};
+
+
+const clamp = (value, min = 0, max = 100) =>
+  Math.min(Math.max(value, min), max);
+
+const round = (value, precision = 3) =>
+  parseFloat(value.toFixed(precision));
+
+const adjust = (
+  value,
+  fromMin,
+  fromMax,
+  toMin,
+  toMax
+) =>
+  round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
+
+const easeInOutCubic = (x) =>
+  x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+
+const TeamMemberCard = ({
+  image,
+  name = "Имя сотрудника",
+  role = "Должность",
+  description = "Описание",
+  className = "",
+  enableTilt = true,
+  enableMobileTilt = false,
+  mobileTiltSensitivity = 5,
+}) => {
+
+  const wrapRef = useRef(null);
   const cardRef = useRef(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const rotateX = useMotionValue(0);
-  const rotateY = useMotionValue(0);
-  const glowOpacity = useMotionValue(0);
-  const textGlow = useMotionTemplate`drop-shadow(0 0 8px rgba(60, 185, 243, ${glowOpacity})) drop-shadow(0 0 16px rgba(232, 27, 167, ${glowOpacity}))`;
 
-  const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
-    
-    const rect = cardRef.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseXVal = e.clientX - rect.left;
-    const mouseYVal = e.clientY - rect.top;
-    const rotateYVal = ((mouseXVal - width/2) / width) * 20;
-    const rotateXVal = -((mouseYVal - height/2) / height) * 20;
-    
-    mouseX.set(mouseXVal);
-    mouseY.set(mouseYVal);
-    rotateX.set(rotateXVal);
-    rotateY.set(rotateYVal);
-    animate(glowOpacity, 0.5, { duration: 0.3 });
-  };
+  const animationHandlers = useMemo(() => {
+    if (!enableTilt) return null;
 
-  const handleMouseLeave = () => {
-    animate(rotateX, 0, { duration: 0.5 });
-    animate(rotateY, 0, { duration: 0.5 });
-    animate(glowOpacity, 0, { duration: 0.3 });
-  };
+    let rafId = null;
+
+    const updateCardTransform = (
+      offsetX,
+      offsetY,
+      card,
+      wrap
+    ) => {
+      const width = card.clientWidth;
+      const height = card.clientHeight;
+
+      const percentX = clamp((100 / width) * offsetX);
+      const percentY = clamp((100 / height) * offsetY);
+
+      const centerX = percentX - 50;
+      const centerY = percentY - 50;
+
+      const properties = {
+        "--pointer-x": `${percentX}%`,
+        "--pointer-y": `${percentY}%`,
+        "--background-x": `${adjust(percentX, 0, 100, 35, 65)}%`,
+        "--background-y": `${adjust(percentY, 0, 100, 35, 65)}%`,
+        "--pointer-from-center": `${clamp(Math.hypot(percentY - 50, percentX - 50) / 50, 0, 1)}`,
+        "--pointer-from-top": `${percentY / 100}`,
+        "--pointer-from-left": `${percentX / 100}`,
+        "--rotate-x": `${round(-(centerX / 5))}deg`,
+        "--rotate-y": `${round(centerY / 4)}deg`,
+      };
+
+      Object.entries(properties).forEach(([property, value]) => {
+        wrap.style.setProperty(property, value);
+      });
+    };
+
+    const createSmoothAnimation = (
+      duration,
+      startX,
+      startY,
+      card,
+      wrap
+    ) => {
+      const startTime = performance.now();
+      const targetX = wrap.clientWidth / 2;
+      const targetY = wrap.clientHeight / 2;
+
+      const animationLoop = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = clamp(elapsed / duration);
+        const easedProgress = easeInOutCubic(progress);
+
+        const currentX = adjust(easedProgress, 0, 1, startX, targetX);
+        const currentY = adjust(easedProgress, 0, 1, startY, targetY);
+
+        updateCardTransform(currentX, currentY, card, wrap);
+
+        if (progress < 1) {
+          rafId = requestAnimationFrame(animationLoop);
+        }
+      };
+
+      rafId = requestAnimationFrame(animationLoop);
+    };
+
+    return {
+      updateCardTransform,
+      createSmoothAnimation,
+      cancelAnimation: () => {
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      },
+    };
+  }, [enableTilt]);
+
+  const handlePointerMove = useCallback(
+    (event) => {
+      const card = cardRef.current;
+      const wrap = wrapRef.current;
+
+      if (!card || !wrap || !animationHandlers) return;
+
+      const rect = card.getBoundingClientRect();
+      animationHandlers.updateCardTransform(
+        event.clientX - rect.left,
+        event.clientY - rect.top,
+        card,
+        wrap
+      );
+    },
+    [animationHandlers]
+  );
+
+  const handlePointerEnter = useCallback(() => {
+    const card = cardRef.current;
+    const wrap = wrapRef.current;
+
+    if (!card || !wrap || !animationHandlers) return;
+
+    animationHandlers.cancelAnimation();
+    wrap.classList.add("active");
+    card.classList.add("active");
+  }, [animationHandlers]);
+
+  const handlePointerLeave = useCallback(
+    (event) => {
+      const card = cardRef.current;
+      const wrap = wrapRef.current;
+
+      if (!card || !wrap || !animationHandlers) return;
+
+      animationHandlers.createSmoothAnimation(
+        ANIMATION_CONFIG.SMOOTH_DURATION,
+        event.offsetX,
+        event.offsetY,
+        card,
+        wrap
+      );
+      wrap.classList.remove("active");
+      card.classList.remove("active");
+    },
+    [animationHandlers]
+  );
+
+  const handleDeviceOrientation = useCallback(
+    (event) => {
+      const card = cardRef.current;
+      const wrap = wrapRef.current;
+
+      if (!card || !wrap || !animationHandlers) return;
+
+      const { beta, gamma } = event;
+      if (!beta || !gamma) return;
+
+      animationHandlers.updateCardTransform(
+        card.clientHeight / 2 + gamma * mobileTiltSensitivity,
+        card.clientWidth / 2 + (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
+        card,
+        wrap
+      );
+    },
+    [animationHandlers, mobileTiltSensitivity]
+  );
+
+  useEffect(() => {
+    if (!enableTilt || !animationHandlers) return;
+
+    const card = cardRef.current;
+    const wrap = wrapRef.current;
+
+    if (!card || !wrap) return;
+
+    const pointerMoveHandler = handlePointerMove;
+    const pointerEnterHandler = handlePointerEnter;
+    const pointerLeaveHandler = handlePointerLeave;
+    const deviceOrientationHandler = handleDeviceOrientation;
+
+    const handleClick = () => {
+      if (!enableMobileTilt || window.location.protocol !== 'https:') return;
+      if (typeof window.DeviceMotionEvent.requestPermission === 'function') {
+        window.DeviceMotionEvent
+          .requestPermission()
+          .then(state => {
+            if (state === 'granted') {
+              window.addEventListener('deviceorientation', deviceOrientationHandler);
+            }
+          })
+          .catch(err => console.error(err));
+      } else {
+        window.addEventListener('deviceorientation', deviceOrientationHandler);
+      }
+    };
+
+    card.addEventListener("pointerenter", pointerEnterHandler);
+    card.addEventListener("pointermove", pointerMoveHandler);
+    card.addEventListener("pointerleave", pointerLeaveHandler);
+    card.addEventListener("click", handleClick);
+
+    const initialX = wrap.clientWidth - ANIMATION_CONFIG.INITIAL_X_OFFSET;
+    const initialY = ANIMATION_CONFIG.INITIAL_Y_OFFSET;
+
+    animationHandlers.updateCardTransform(initialX, initialY, card, wrap);
+    animationHandlers.createSmoothAnimation(
+      ANIMATION_CONFIG.INITIAL_DURATION,
+      initialX,
+      initialY,
+      card,
+      wrap
+    );
+
+    return () => {
+      card.removeEventListener("pointerenter", pointerEnterHandler);
+      card.removeEventListener("pointermove", pointerMoveHandler);
+      card.removeEventListener("pointerleave", pointerLeaveHandler);
+      card.removeEventListener("click", handleClick);
+      window.removeEventListener('deviceorientation', deviceOrientationHandler);
+      animationHandlers.cancelAnimation();
+    };
+  }, [
+    enableTilt,
+    enableMobileTilt,
+    animationHandlers,
+    handlePointerMove,
+    handlePointerEnter,
+    handlePointerLeave,
+    handleDeviceOrientation,
+  ]);
+
+  const cardStyle = useMemo(
+    () => ({
+      "--behind-gradient": DEFAULT_BEHIND_GRADIENT,
+      "--inner-gradient": DEFAULT_INNER_GRADIENT,
+    }),
+    []
+  );
 
   return (
-    <div 
-      ref={cardRef}
-      className="relative h-full perspective-1000 group"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+    <div
+      ref={wrapRef}
+      className={`portfolio-card-wrapper ${className}`.trim()}
+      style={cardStyle}
     >
-      {/* Glow effect */}
-      <motion.div 
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{
-          background: useMotionTemplate`radial-gradient(
-            600px circle at ${mouseX}px ${mouseY}px,
-            rgba(60, 185, 243, 0.15),
-            rgba(232, 27, 167, 0.1)
-          )`,
-        }}
-      />
-      
-      {/* Card border gradient */}
-      <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-[#3CB9F3] via-[#e81ba7] to-[#3CB9F3] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
-      {/* Main card */}
-      <motion.div
-        className="h-full bg-gray-900/80 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden relative"
-        style={{
-          rotateX,
-          rotateY,
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        {/* Image with parallax effect */}
-        <motion.div 
-          className="relative h-64 overflow-hidden"
-          style={{
-            y: useMotionTemplate`calc(${rotateY}px * 0.5)`,
-            scale: 1.05,
-          }}
-        >
-          <LazyLoadImage
-            src={member.image}
-            alt={member.name}
-            effect="opacity"
-            className="w-full h-full object-cover"
-            wrapperClassName="w-full h-full"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-        </motion.div>
-        
-        {/* Content */}
-        <div className="p-6 relative">
-          {/* Floating particles */}
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
-            {[...Array(10)].map((_, i) => (
-              <div 
-                key={i}
-                className="absolute rounded-full bg-white"
-                style={{
-                  width: `${Math.random() * 4 + 1}px`,
-                  height: `${Math.random() * 4 + 1}px`,
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animation: `float ${Math.random() * 10 + 5}s linear infinite`,
-                  animationDelay: `${Math.random() * 5}s`
+      <section ref={cardRef} className="portfolio-card">
+        <div className="portfolio-inside">
+          <div className="portfolio-shine" />
+          <div className="portfolio-glare" />
+          <div className="portfolio-content">
+            <div className="portfolio-image-container">
+              <img
+                className="portfolio-image"
+                src={image}
+                alt={name}
+                loading="lazy"
+                onError={(e) => {
+                  const target = e.target;
+                  target.style.display = "none";
                 }}
               />
-            ))}
+            </div>
+            <div className="portfolio-details">
+              <h3 className="portfolio-title">{name}</h3>
+              <p className="portfolio-role">{role}</p>
+              <p className="portfolio-description">{description}</p>
+            </div>
           </div>
-          
-          <motion.h3 
-            className="text-2xl font-bold mb-1 bg-clip-text text-transparent bg-gradient-to-r from-[#3CB9F3] to-[#e81ba7]"
-            style={{ filter: textGlow }}
-          >
-            {member.name}
-          </motion.h3>
-          
-          <motion.p 
-            className="text-[#e81ba7] font-medium mb-3"
-            style={{ filter: textGlow }}
-          >
-            {member.role}
-          </motion.p>
-          
-          <motion.p 
-            className="text-gray-300 relative z-10"
-            style={{ 
-              filter: textGlow,
-              textShadow: '0 0 10px rgba(60, 185, 243, 0.3)'
-            }}
-          >
-            {member.description}
-          </motion.p>
         </div>
-        
-        {/* Hover effect */}
-        <motion.div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: useMotionTemplate`radial-gradient(
-              300px circle at ${mouseX}px ${mouseY}px,
-              rgba(60, 185, 243, 0.1),
-              transparent 80%
-            )`,
-          }}
-        />
-      </motion.div>
+      </section>
     </div>
   );
 };
 
-// CSS for floating animation
-const FloatingParticlesCSS = () => (
-  <style jsx global>{`
-    @keyframes float {
-      0% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-50px) translateX(10px); }
-      100% { transform: translateY(0) translateX(0); }
-    }
-  `}</style>
-);
 
-export default TeamMemberCard;
+export default React.memo(TeamMemberCard);
